@@ -1,0 +1,8 @@
+✔ Implement API method Axios     done(√)
+✔ Implement API mocking via axios mock adapter     done(√)
+✔ Add promise polyfill     done(√)
+☐ Implement simple 'vuex' pattern
+☐ Decide how much we want to use test
+  ☐ jest       - https://facebook.github.io/jest/
+  ☐ nightwatch - http://nightwatchjs.org/
+✔ Implement lazy loading via webpack code splitting - https://alexjoverm.github.io/2017/07/16/Lazy-load-in-Vue-using-Webpack-s-code-splitting/     done(√)

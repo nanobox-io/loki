@@ -1,13 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import bavaria from '@/components/bavaria'
+/*
+  We are using the following import structure here so these components
+  are lazy loaded only when this route is visited.
+  See : https://router.vuejs.org/en/advanced/lazy-loading.html
+*/
+const EnvVars    = ()=> import('@/components/env-vars')
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path : '/',        component: HelloWorld },
-    { path : '/bavaria', component: bavaria },
+    { path : '/env-vars', component: EnvVars },
   ]
 })

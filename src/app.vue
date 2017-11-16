@@ -1,7 +1,7 @@
 <template lang="pug">
   #app
-    img(src="./assets/logo.png")
     router-view
+    //- img(src="./assets/logo.png")
 </template>
 
 <script>

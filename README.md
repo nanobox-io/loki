@@ -1,6 +1,20 @@
 # loki
 
-> The nanobox dashboard front-end app
+The nanobox dashboard front-end app
+
+# Overview
+
+### Model
+See `src/store`
+
+### Router
+See `src/router`
+
+### API integration
+We are using [axios](https://github.com/axios/axios) for our API communication. This communication happens in the VUEX modules (the model).
+
+### Local API Mocking
+See `data-shims`
 
 ## Build Setup
 
