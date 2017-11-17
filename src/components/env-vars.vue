@@ -3,16 +3,16 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'env-vars',
-  // Data sources
   computed:{
+    // Data sources
     ...mapGetters(['allVars']),
   },
-  // Actions to call on the model
   methods: {
+    // Actions to call on the model
     ...mapActions(['deleteVar']),
   },
-  // On creation, get the data
   created(){
+    // On creation, get the data
     this.$store.dispatch('getEnvVars')
   }
 }

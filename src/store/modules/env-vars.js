@@ -32,7 +32,7 @@ export default {
 
   // ------------------------------------ Data Mutations
   mutations : {
-    // Called when
+    // Called when data is loaded
     receiveEnvVars(state, data) {
       state.vars = data.vars
     },
