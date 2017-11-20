@@ -1,7 +1,6 @@
 <script type="text/babel">
-import topNav from './components/top-nav'
 export default {
-  name: 'app'
+  name: 'top-nav'
 }
 </script>
 
@@ -10,8 +9,7 @@ export default {
 -->
 
 <template lang="pug">
-  #app
-    router-view
+  .top-nav
 </template>
 
 <!--
@@ -19,9 +17,5 @@ export default {
 -->
 
 <style lang="scss" scoped>
-  #app {}
-</style>
-
-<style lang="scss">
-  @import './components/app/base';
+  .top-nav {}
 </style>
