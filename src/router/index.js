@@ -5,12 +5,14 @@ import Router from 'vue-router'
   are lazy loaded only when this route is visited.
   See : https://router.vuejs.org/en/advanced/lazy-loading.html
 */
-const EnvVars    = ()=> import('@/components/env-vars')
+const EnvVars      = ()=> import('@/components/env-vars')
+const AccountAdmin = ()=> import('@/components/account-admin/account-admin')
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     { path : '/env-vars', component: EnvVars },
+    { path : '/admin',    component: AccountAdmin },
   ]
 })

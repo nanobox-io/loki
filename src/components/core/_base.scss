@@ -1,0 +1,23 @@
+@import '../../scss/common';
+
+body, html{
+  background: $bg-gray;
+  font-family:$proxima;
+  color:#034C66;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // Don't allow random selection
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.section-title {@include caps(#3F5F6B, 14px); border-bottom: 1px solid #D1DCDF; padding-bottom:18px; margin-bottom:24px;  }
+
+
+a {color:#1EB8FF; cursor:pointer; text-decoration: none;
+  &:hover {color:#0084BF;}
+}

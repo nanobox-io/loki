@@ -1,9 +1,11 @@
 <script type="text/babel">
-import topNav from './components/top-nav'
+import topNav from './components/top-nav/top-nav'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {topNav}
 }
 </script>
+
 
 <!--
   **** H T M L ****
@@ -11,7 +13,10 @@ export default {
 
 <template lang="pug">
   #app
-    router-view
+    link( rel="stylesheet" href="https://use.typekit.net/cqd5kth.css")
+    .main
+      top-nav
+      router-view
 </template>
 
 <!--
@@ -19,9 +24,11 @@ export default {
 -->
 
 <style lang="scss" scoped>
-  #app {}
+  #app {
+    .main{max-width:$app-width; margin:0 auto; }
+  }
 </style>
 
 <style lang="scss">
-  @import './components/app/base';
+  @import './components/core/base';
 </style>

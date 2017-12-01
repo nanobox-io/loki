@@ -1,0 +1,3 @@
+@mixin caps ($color: #005375, $font-size:17px) {
+  color: $color; font-size:$font-size; letter-spacing: 0.06em; text-transform: uppercase; font-weight: $bold;
+}

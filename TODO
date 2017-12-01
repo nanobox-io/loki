@@ -1,7 +1,7 @@
 ✔ Implement API method Axios     done(√)
 ✔ Implement API mocking via axios mock adapter     done(√)
 ✔ Add promise polyfill     done(√)
-☐ Implement simple 'vuex' pattern
+✔ Implement simple 'vuex' pattern     done(√)
 ☐ Decide how much we want to use test
   ☐ jest       - https://facebook.github.io/jest/
   ☐ nightwatch - http://nightwatchjs.org/

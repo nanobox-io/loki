@@ -62,7 +62,7 @@ exports.cssLoaders = function (options) {
       {
         loader: 'sass-resources-loader',
         options: {
-          resources: './src/components/scss/_vars-utils.scss'
+          resources: './src/scss/_vars-utils.scss'
         }
       }
     ),    stylus: generateLoaders('stylus'),

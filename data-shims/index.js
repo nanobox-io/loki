@@ -6,3 +6,4 @@ let mock  = new Mocker(axios, { delayResponse: delay } )
 
 // Mocked API paths
 mock.onGet('/env-vars').reply(200, require('./env-vars').default )
+mock.onGet('/user').reply(200    , require('./user').default )
