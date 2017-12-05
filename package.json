@@ -17,6 +17,7 @@
     "es6-promise": "^4.1.1",
     "lexi": "tolmark12/nanobox-lexi",
     "lodash": "^4.17.4",
+    "nanobox-app-launch": "nanobox-io/nanobox-dash-ui-app-launch",
     "node-sass": "^4.6.1",
     "sass-loader": "^6.0.6",
     "sass-resources-loader": "^1.3.1",
