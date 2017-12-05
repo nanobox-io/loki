@@ -1,23 +1,45 @@
 <script type="text/babel">
-import $ from 'jquery'
+import { mapGetters, mapActions } from 'vuex'
+
 // Dependencies for the legacy component
-// require('jquery/dist/jquery.js')
-require('sequin/rel/app.js')
-require('velocity-animate/velocity.js')
-require('shadow-icons-old/rel/app.js')
-require('jade/jade.js')
-require('lexi-old/rel/app.js')
+// import $ from 'jquery'
+require("expose-loader?$!jquery");
+require('script-loader!sequin/rel/app.js')
+require('script-loader!velocity-animate/velocity.js')
+require('script-loader!shadow-icons-old/rel/app.js')
+require('script-loader!jade/runtime.js')
+require('script-loader!lexi-old/rel/app.js')
 require('lexi-old/rel/style.css')
 // The legacy component
-require('nanobox-app-launch/rel/app.js')
+require('script-loader!nanobox-app-launch/rel/app.js')
 require('nanobox-app-launch/rel/style.css')
 
 export default {
   name: 'app-launch',
+  computed:{
+    ...mapGetters('appLaunch', ['providers']),
+  },
+
+  // Load the providers
   mounted(){
-    let app = new nanobox.AppLaunch( $(this.$refs.main) )
-    console.log( app )
-  }
+    this.$store.dispatch('appLaunch/getProviders')
+  },
+
+  // On data load, instantiate the component
+  watch:{
+    providers(){
+      console.log( $ )
+      console.log( castShadows )
+      let app = new nanobox.AppLaunch( $(this.$refs.main) )
+      let config = {
+        providers      : this.providers,
+        appLaunchCb    : ()=>{},
+        onCancel       : ()=>{},
+        validateNameCb : ()=>{}
+      }
+      app.createAppLauncher(config)
+    }
+  },
 
 }
 </script>
@@ -27,13 +49,16 @@ export default {
 -->
 
 <template lang="pug">
-  .app-launch(ref="main")
+  .app-launch
+    .holder(ref="main")
 </template>
 
 <!--
   ***** C S S *****
 -->
-
+<style lang="scss">
+  // @import "/node-modules/nanobox-app-launch/rel/style.css";
+</style>
 <style lang="scss" scoped>
-  .app-launch {}
+  .app-launch {width:960px; margin:40px auto 0;}
 </style>
