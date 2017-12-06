@@ -8,17 +8,13 @@ export default {
     region: {type: String, default:""}
   },
   created: function() {
-    this.oldName = this.appName
+    this.currentName = this.appName;
   },
   data: function (){
     return {
+      currentName: "",
       isEditing: false,
       oldName: ""
-    }
-  },
-  methods: {
-    edit: function () {
-      this.isEditing = (this.appName != this.oldName)
     }
   }
 }
@@ -35,10 +31,9 @@ export default {
     label(for='name') Name
     input(
       name='name'
-      v-model='appName'
-      v-on:input='edit'
+      v-model='currentName'
       :disabled='renamePermission')
-    .save-zone(v-if='isEditing')
+    .save-zone(v-if='currentName != appName')
       a.cancel(href="") Cancel
       button.save.lifecycle Save Changes
         //- checkmark svg here...
