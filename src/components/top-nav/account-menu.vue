@@ -1,5 +1,5 @@
 <script type="text/babel">
-import { mapGetters, mapActions } from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
 import {gravatar} from 'lexi'
 import {mixin as onClickOutside} from 'vue-on-click-outside'
 
@@ -13,7 +13,7 @@ export default {
     }
   },
   computed:{
-    ...mapGetters(['username', 'email', 'adminPath', 'appsPath', 'id', 'teams', 'contextId']),
+    ...mapGetters('user', ['username', 'email', 'adminPath', 'appsPath', 'id', 'teams', 'contextId']),
   },
   methods:{
     logout() {
@@ -23,7 +23,7 @@ export default {
       this.subMenuOpen = false;
     }
   },
-  created(){ this.$store.dispatch('getUser') },
+  created(){ this.$store.dispatch('user/getUser') },
 }
 </script>
 

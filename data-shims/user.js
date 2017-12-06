@@ -9,4 +9,7 @@ export default{
     {name:'fish_feather', appsPath:'abcdefg1234567', adminPath: 'path/to/admin/in/cur/context', id:'4444'},
     {name:'quatrote',     appsPath:'abcdefg1234567', adminPath: 'path/to/admin/in/cur/context', id:'5555'}
   ],
+  providerAccounts:[
+    // Do we want to move these from ./providers-launch ?
+  ]
 }
