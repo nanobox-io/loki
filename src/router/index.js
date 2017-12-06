@@ -5,13 +5,15 @@ import Router from 'vue-router'
   are lazy loaded only when this route is visited.
   See : https://router.vuejs.org/en/advanced/lazy-loading.html
 */
-const AccountAdmin = ()=> import('@/components/account-admin/account-admin')
-const LaunchApp    = ()=> import('@/components/app-launch/app-launch')
+const AccountAdmin = () => import('@/components/account-admin/account-admin')
+const AppAdmin     = () => import('@/components/app-admin/app-admin')
+const LaunchApp    = () => import('@/components/app-launch/app-launch')
 Vue.use(Router)
 
 export default new Router({
   routes: [
     { path : '/admin',      component: AccountAdmin },
+    { path : '/app-admin',  component: AppAdmin },
     { path : '/launch-app', component: LaunchApp },
   ]
 })
